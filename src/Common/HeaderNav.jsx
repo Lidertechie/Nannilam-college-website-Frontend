@@ -614,7 +614,9 @@ const HeaderNav = () => {
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                width: "100%",
+                                width: { xs: "auto", md: "100%" },
+                                flex: { xs: "1 1 auto", md: "unset" },
+                                minWidth: 0,
                                 py: { xs: 0.5, sm: 0.8, md: 0.5 },
                             }}
                         >
@@ -625,7 +627,8 @@ const HeaderNav = () => {
                                     display: "flex",
                                     flexDirection: "column",
                                     alignItems: "center",
-                                    mr: { xs: 2, md: 4 },
+                                    flexShrink: 0,
+                                    mr: { xs: 1, sm: 2, md: 4 },
                                 }}
                             >
                                 <Box
@@ -633,8 +636,8 @@ const HeaderNav = () => {
                                     src="/gvtlogo.png"
                                     alt="Left Logo"
                                     sx={{
-                                        height: { xs: 40, sm: 50, md: 70, lg: 85, xl: 95 },
-                                        width: { xs: 40, sm: 50, md: 70, lg: 85, xl: 95 },
+                                        height: { xs: 34, sm: 50, md: 70, lg: 85, xl: 95 },
+                                        width: { xs: 34, sm: 50, md: 70, lg: 85, xl: 95 },
                                         bgcolor: "#fff",
                                         borderRadius: "50%",
                                         p: 0.5,
@@ -643,13 +646,13 @@ const HeaderNav = () => {
                                         left: "-2px",
                                     }}
                                 />
-                                College Code - 1051016
                                 <Typography
                                     sx={{
                                         mt: 0.5,
                                         color: "#ffffff",
                                         fontWeight: 400,
                                         textAlign: "center",
+                                        whiteSpace: "nowrap",
                                         fontSize: {
                                             xs: "0.45rem",
                                             sm: "0.55rem",
@@ -659,7 +662,7 @@ const HeaderNav = () => {
                                         },
                                     }}
                                 >
-
+                                    College Code - 1051016
                                 </Typography>
                             </Box>
 
@@ -670,14 +673,15 @@ const HeaderNav = () => {
                                     flexDirection: "column",
                                     alignItems: "center",
                                     textAlign: "center",
-                                    mx: { xs: 1, md: 3 },
+                                    minWidth: 0,
+                                    mx: { xs: 0.5, sm: 1, md: 3 },
                                 }}
                             >
                                 <Typography
                                     sx={{
                                         color: "#fff",
                                         fontSize: {
-                                            xs: "0.9rem",
+                                            xs: "0.7rem",
                                             sm: "1.1rem",
                                             md: "1.6rem",
                                             lg: "2rem",
@@ -729,7 +733,8 @@ const HeaderNav = () => {
                                     display: "flex",
                                     flexDirection: "column",
                                     alignItems: "center",
-                                    ml: { xs: 2, md: 4 },
+                                    flexShrink: 0,
+                                    ml: { xs: 1, sm: 2, md: 4 },
                                 }}
                             >
                                 <Box
@@ -738,9 +743,9 @@ const HeaderNav = () => {
                                     alt="Right Logo"
                                     onClick={handleLogoClick}
                                     sx={{
-                                        mt: 2.5,
-                                        height: { xs: 40, sm: 50, md: 70, lg: 85, xl: 95 },
-                                        width: { xs: 40, sm: 50, md: 70, lg: 85, xl: 95 },
+                                        mt: { xs: 0, sm: 2.5 },
+                                        height: { xs: 34, sm: 50, md: 70, lg: 85, xl: 95 },
+                                        width: { xs: 34, sm: 50, md: 70, lg: 85, xl: 95 },
                                         bgcolor: "#fff",
                                         borderRadius: "50%",
                                         p: 0.5,
@@ -758,6 +763,7 @@ const HeaderNav = () => {
                                         color: "#ffffff",
                                         fontWeight: 400,
                                         textAlign: "center",
+                                        whiteSpace: "nowrap",
                                         fontSize: {
                                             xs: "0.45rem",
                                             sm: "0.55rem",
@@ -1046,10 +1052,8 @@ const HeaderNav = () => {
                                 display: { xs: 'flex', md: 'none' },
                                 color: '#fff',
                                 p: { xs: 0.5, sm: 0.8 },
-                                position: 'absolute',
-                                right: { xs: 4, sm: 8 },
-                                top: '50%',
-                                transform: 'translateY(-50%)',
+                                flexShrink: 0,
+                                ml: 0.5,
                                 '& svg': { fontSize: { xs: '1.2rem', sm: '1.5rem' } }
                             }}
                         >
